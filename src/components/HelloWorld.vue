@@ -64,10 +64,15 @@
       <span>{{inputMessage}}</span>
       <input v-model="inputMessage"/>
     </div>
+
+    <todo v-bind:todo="propForTodo"></todo>
   </div>
 </template>
 
-<script> export default {
+<script> import Todo from './Todo';
+
+export default {
+  components: { Todo },
   name: 'HelloWorld',
   data() {
     return {
@@ -76,14 +81,15 @@
       inputMessage: 'this is a two-way binding message',
       seen: true,
       todos: [
-        {text: 'Learn JavaScript'},
-        {text: 'Learn Vue'},
-        {text: 'Build something awesome'}
+        { text: 'Learn JavaScript' },
+        { text: 'Learn Vue' },
+        { text: 'Build something awesome' },
       ],
+      propForTodo: 'hahaha',
     };
   },
   methods: {
-    hideText: function () {
+    hideText() {
       this.seen = !this.seen;
     },
   },
