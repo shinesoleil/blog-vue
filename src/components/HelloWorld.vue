@@ -58,7 +58,7 @@
       {{todo.text}}
     </span>
     <div>
-      <button v-on:click="hideText">Click Me!</button>
+      <button @click="hideText">Click Me!</button>
     </div>
     <div>
       <span>{{inputMessage}}</span>
@@ -69,7 +69,7 @@
   </div>
 </template>
 
-<script> import Todo from './Todo';
+<script> import Todo from './Todo.vue';
 
 export default {
   components: { Todo },

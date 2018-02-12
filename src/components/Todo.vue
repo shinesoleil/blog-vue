@@ -1,17 +1,21 @@
 <template>
   <div>
     <h2>This is a todo Component</h2>
-    <h3>{{todo}}</h3>
-    <h3>{{dataTodo}}</h3>
+    <h3>{{title}}</h3>
+    <ul>
+      <li v-for="(todo, index) in todos" v-bind:key="index">
+        <h4>{{todo}}</h4>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script> export default {
   name: 'todo',
-  props: ['todo'],
+  props: ['todos'],
   data() {
     return {
-      dataTodo: 'hahaha',
+      title: 'Todo List',
     };
   },
 }; </script>
