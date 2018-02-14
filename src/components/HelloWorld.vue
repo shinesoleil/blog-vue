@@ -69,7 +69,9 @@
   </div>
 </template>
 
-<script> import Todo from './Todo.vue';
+<script>
+// eslint-disable-next-line import/extensions
+import Todo from './Todo.vue';
 
 export default {
   components: { Todo },
