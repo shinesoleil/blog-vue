@@ -2,7 +2,13 @@
   <div id="app">
     <div class="head"></div>
     <div class="body-wrap">
-      <div class="left"></div>
+      <div class="sidebar">
+        <ul class="menu">
+          <li class="item">About</li>
+          <li class="item">Work</li>
+          <li class="item">Contact</li>
+        </ul>
+      </div>
       <div class="center">
         <img src="./assets/logo.png">
         <router-view/>
@@ -15,7 +21,14 @@
   name: 'App',
 }; </script>
 
-<style>
+<style lang="scss">
+  @mixin shift($property: all, $duration: .3s, $ease: linear) {
+    -webkit-transition: $property $duration $ease;
+    -moz-transition: $property $duration $ease;
+    -o-transition: $property $duration $ease;
+    transition: $property $duration $ease;
+  }
+
   html, body {
     height: 100%;
     margin: 0;
@@ -44,11 +57,28 @@
     margin-top: 80px;
   }
 
-  .left {
+  .sidebar {
     height: 100%;
     width: 200px;
     position: fixed;
     background-color: #F9F9F9;
+
+    .menu {
+      list-style: none;
+
+      .item {
+        height: 50px;
+        line-height: 50px;
+        font-size: 25px;
+        @include shift(padding-right);
+
+        &:hover {
+          color: #52C08E;
+          padding-right: 15px;
+        }
+      }
+    }
+
   }
 
   .center {
