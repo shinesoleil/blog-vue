@@ -45,6 +45,7 @@ export default new Router({
         {
           path: 'all',
           name: 'user-all',
+          // components with an 's'
           components: {
             default: UserHome,
             profile: UserProfile,
