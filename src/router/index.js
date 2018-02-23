@@ -13,12 +13,12 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Hello ThoughtWorks',
+      name: 'homepage',
       component: HelloWorld,
     },
     {
       path: '/lifecycles/created',
-      name: 'created',
+      name: 'table-test',
       component: MyTable,
     },
     {
@@ -29,15 +29,27 @@ export default new Router({
       children: [
         {
           path: '',
+          name: 'user-home',
           component: UserHome,
         },
         {
           path: 'profile',
+          name: 'user-profie',
           component: UserProfile,
         },
         {
           path: 'settings',
+          name: 'user-settings',
           component: UserSettings,
+        },
+        {
+          path: 'all',
+          name: 'user-all',
+          components: {
+            default: UserHome,
+            profile: UserProfile,
+            settings: UserSettings,
+          },
         },
       ],
     },

@@ -6,8 +6,11 @@
       <router-link to="/user/123">Home</router-link>
       <router-link to="/user/123/profile">Profile</router-link>
       <router-link to="/user/123/settings">Settings</router-link>
+      <router-link to="/user/123/all">All</router-link>
     </div>
     <router-view/>
+    <router-view name="profile"/>
+    <router-view name="settings"/>
   </div>
 </template>
 
