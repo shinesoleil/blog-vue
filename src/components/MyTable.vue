@@ -1,7 +1,8 @@
 <template>
   <div>
     <h1>my table</h1>
-    <vcl-facebook></vcl-facebook>
+    <vcl-bullet-list v-if="isLoading"></vcl-bullet-list>
+    <h2 v-if="isError">error</h2>
     <table>
       <tr v-for="(item) in data" v-bind:key="item.name.toString()">
         <th>{{item.postId}}</th>
@@ -14,19 +15,26 @@
 </template>
 
 
-<script> import { VclFacebook } from 'vue-content-loading';
+<script> import { VclBulletList } from 'vue-content-loading';
 
 export default {
   name: 'my-table',
   components: {
-    VclFacebook,
+    VclBulletList,
   },
   data: () => ({
     data: [],
+    isLoading: true,
+    isError: false,
   }),
   async created() {
-    const res = await fetch('http://jsonplaceholder.typicode.com/comments');
-    this.data = await res.json();
+    try {
+      const res = await fetch('http://jsonplaceholder.typicode.com/commentss');
+      this.data = await res.json();
+      this.isLoading = false;
+    } catch (err) {
+      this.isError = true;
+    }
   },
 }; </script>
 

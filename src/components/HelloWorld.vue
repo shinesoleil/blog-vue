@@ -4,6 +4,12 @@
     <h2>Essential Links</h2>
     <ul>
       <li>
+        <router-link to="/user/123">User</router-link>
+        <router-link to="/lifecycles/created">Vue Table</router-link>
+      </li>
+    </ul>
+    <ul>
+      <li>
         <a
           href="https://vuejs.org"
           target="_blank"
