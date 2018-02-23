@@ -4,9 +4,9 @@
     <div class="body-wrap">
       <div class="sidebar">
         <ul class="menu">
-          <li class="item">About</li>
-          <li class="item">Work</li>
-          <li class="item">Contact</li>
+          <li class="item" @click="handleClick('homepage')">About</li>
+          <li class="item" @click="handleClick('table-test')">Work</li>
+          <li class="item" @click="handleClick('user')">Contact</li>
         </ul>
       </div>
       <div class="center">
@@ -17,8 +17,17 @@
   </div>
 </template>
 
-<script> export default {
+<script> import Router from './router/index';
+
+export default {
   name: 'App',
+  methods: {
+    handleClick: (routeName) => {
+      Router.push({
+        name: routeName,
+      });
+    },
+  },
 }; </script>
 
 <style lang="scss">

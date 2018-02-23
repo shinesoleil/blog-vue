@@ -24,6 +24,7 @@ export default new Router({
     {
       // https://github.com/pillarjs/path-to-regexp#parameters
       path: '/user/:id(\\d+)',
+      name: 'user',
       component: User,
       props: true,
       children: [

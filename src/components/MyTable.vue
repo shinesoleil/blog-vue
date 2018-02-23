@@ -29,7 +29,7 @@ export default {
   }),
   async created() {
     try {
-      const res = await fetch('http://jsonplaceholder.typicode.com/commentss');
+      const res = await fetch('http://jsonplaceholder.typicode.com/comments');
       this.data = await res.json();
       this.isLoading = false;
     } catch (err) {
