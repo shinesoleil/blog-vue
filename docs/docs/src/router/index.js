@@ -36,9 +36,10 @@ var _UserSettings = require('@/components/user/UserSettings');
 
 var _UserSettings2 = _interopRequireDefault(_UserSettings);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
 
-/* eslint-disable import/extensions */
 _vue2.default.use(_vueRouter2.default);
 
 exports.default = new _vueRouter2.default({
@@ -80,4 +81,5 @@ exports.default = new _vueRouter2.default({
     }]
   }]
 });
+//# sourceMappingURL=index.js.map
 //# sourceMappingURL=index.js.map
