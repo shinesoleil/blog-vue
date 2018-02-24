@@ -6,6 +6,7 @@ import { linkTo } from '@storybook/addon-links';
 
 import MyButton from './MyButton.vue';
 import Welcome from './Welcome.vue';
+// eslint-disable-next-line import/extensions
 import Todo from '../components/Todo.vue';
 
 storiesOf('Welcome', module).add('to Storybook', () => ({
