@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <div class="head"></div>
+    <div class="head">
+      <UserMenu/>
+    </div>
     <div class="body-wrap">
       <div class="sidebar">
         <ul class="menu">
@@ -18,13 +20,18 @@
 </template>
 
 <script> import Router from './router/index';
+import UserMenu from './components/user-menu/UserMenu';
 
 export default {
   name: 'App',
+  components: { UserMenu },
   methods: {
     handleClick: (routeName) => {
       Router.push({
         name: routeName,
+        params: {
+          id: 123,
+        },
       });
     },
   },
