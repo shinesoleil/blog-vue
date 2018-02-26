@@ -86,6 +86,7 @@ export default {
         height: 50px;
         line-height: 50px;
         font-size: 25px;
+        cursor: pointer;
         @include shift(padding-right);
 
         &:hover {

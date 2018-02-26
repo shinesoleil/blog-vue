@@ -1,19 +1,27 @@
 <template>
-  <div class="user-menu">
+  <div class="user-menu" v-on:mouseover="active=true" v-on:mouseleave="active=false">
     <div class="user-info">
       <div class="avatar"></div>
       <div class="name">Hao Pan</div>
     </div>
-    <div class="user-options">
-      <div class="user-option">profile</div>
-      <div class="user-option">settings</div>
-      <div class="user-option">log out</div>
-    </div>
+    <transition name="fade">
+      <div class="user-options" v-show="active">
+        <div class="user-option">profile</div>
+        <div class="user-option">settings</div>
+        <div class="user-option">log out</div>
+      </div>
+    </transition>
   </div>
 </template>
 
 <script> export default {
   name: 'user-menu',
+  data() {
+    return {
+      active: false,
+    };
+  },
+  methods: {},
 }; </script>
 
 <style scoped lang="scss">
@@ -21,7 +29,7 @@
     height: 100%;
     width: 240px;
     float: right;
-    opacity: 0.8;
+    opacity: 0.5;
 
     &:hover {
       opacity: 1;
@@ -56,6 +64,14 @@
           opacity: 1;
         }
       }
+    }
+
+    .fade-enter-active, .fade-leave-active {
+      transition: opacity .5s;
+    }
+
+    .fade-enter, .fade-leave-to {
+      opacity: 0;
     }
 
   }
