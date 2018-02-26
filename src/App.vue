@@ -7,8 +7,9 @@
       <div class="sidebar">
         <ul class="menu">
           <li class="item" @click="handleClick('homepage')">About</li>
+          <li class="item" @click="handleClick('blogs')">Blogs</li>
           <li class="item" @click="handleClick('table-test')">Work</li>
-          <li class="item" @click="handleClick('user')">Contact</li>
+          <li class="item" @click="handleClick('user-home')">Contact</li>
         </ul>
       </div>
       <div class="center">

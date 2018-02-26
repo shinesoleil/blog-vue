@@ -2,6 +2,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import HelloWorld from '@/components/HelloWorld';
+import BlogList from '@/components/blog/BlogList';
 import MyTable from '@/components/MyTable';
 import User from '@/components/user/User';
 import UserHome from '@/components/user/UserHome';
@@ -18,6 +19,11 @@ export default new Router({
       component: HelloWorld,
     },
     {
+      path: '/blogs',
+      name: 'blogs',
+      component: BlogList,
+    },
+    {
       path: '/lifecycles/created',
       name: 'table-test',
       component: MyTable,
@@ -25,7 +31,6 @@ export default new Router({
     {
       // https://github.com/pillarjs/path-to-regexp#parameters
       path: '/user/:id(\\d+)',
-      name: 'user',
       component: User,
       props: true,
       children: [
