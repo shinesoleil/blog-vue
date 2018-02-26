@@ -3,6 +3,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import HelloWorld from '@/components/HelloWorld';
 import BlogList from '@/components/blog/BlogList';
+import Blog from '@/components/blog/Blog';
 import MyTable from '@/components/MyTable';
 import User from '@/components/user/User';
 import UserHome from '@/components/user/UserHome';
@@ -22,6 +23,12 @@ export default new Router({
       path: '/blogs',
       name: 'blogs',
       component: BlogList,
+    },
+    {
+      path: '/blogs/:id',
+      name: 'blog',
+      component: Blog,
+      props: true,
     },
     {
       path: '/lifecycles/created',
