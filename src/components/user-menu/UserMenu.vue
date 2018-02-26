@@ -1,7 +1,10 @@
 <template>
   <div class="user-menu" v-on:mouseover="active=true" v-on:mouseleave="active=false">
     <div class="user-info">
-      <div class="avatar"></div>
+      <div class="avatar">
+        <span class="helper"></span>
+        <img src="../../../static/profile.png"/>
+      </div>
       <div class="name">Hao Pan</div>
     </div>
     <transition name="fade">
@@ -25,8 +28,11 @@
 }; </script>
 
 <style scoped lang="scss">
+  $main-height: 80px;
+  $option-height: 40px;
+
   .user-menu {
-    height: 100%;
+    height: $main-height;
     width: 240px;
     float: right;
     opacity: 0.5;
@@ -36,17 +42,30 @@
     }
 
     .user-info {
-      height: 80px;
-      line-height: 80px;
+      height: $main-height;
+      line-height: $main-height;
 
       .avatar {
         display: inline-block;
-        width: 80px;
+        width: 60px;
+        height: 100%;
+
+        .helper {
+          display: inline-block;
+          height: $main-height;
+          vertical-align: middle;
+        }
+
+        img {
+          width: 40px;
+          vertical-align: middle;
+        }
       }
 
       .name {
         display: inline-block;
-        width: 155px;
+        width: 100px;
+        font-size: 18px;
       }
     }
 
@@ -54,8 +73,8 @@
       cursor: pointer;
 
       .user-option {
-        height: 40px;
-        line-height: 40px;
+        height: $option-height;
+        line-height: $option-height;
         background-color: #E9E9E9;
         opacity: 0.8;
 
