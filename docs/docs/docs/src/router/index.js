@@ -40,7 +40,6 @@ function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
 
-/* eslint-disable import/extensions */
 _vue2.default.use(_vueRouter2.default);
 
 exports.default = new _vueRouter2.default({
@@ -82,5 +81,6 @@ exports.default = new _vueRouter2.default({
     }]
   }]
 });
+//# sourceMappingURL=index.js.map
 //# sourceMappingURL=index.js.map
 //# sourceMappingURL=index.js.map
