@@ -57,7 +57,6 @@ var devWebpackConfig = merge(baseWebpackConfig, {
   new HtmlWebpackPlugin({
     filename: 'index.html',
     template: 'index.html',
-    favicon: './build/logo.png',
     inject: true
   }),
   // copy custom static assets
@@ -91,5 +90,9 @@ module.exports = new _promise2.default(function (resolve, reject) {
     }
   });
 });
+//# sourceMappingURL=webpack.dev.conf.js.map
+//# sourceMappingURL=webpack.dev.conf.js.map
+//# sourceMappingURL=webpack.dev.conf.js.map
+//# sourceMappingURL=webpack.dev.conf.js.map
 //# sourceMappingURL=webpack.dev.conf.js.map
 //# sourceMappingURL=webpack.dev.conf.js.map
