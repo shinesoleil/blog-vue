@@ -8,6 +8,7 @@ import MyButton from './MyButton.vue';
 import Welcome from './Welcome.vue';
 // eslint-disable-next-line import/extensions
 import Todo from '../components/Todo.vue';
+import UserMenu from '../components/user-menu/UserMenu.vue';
 
 storiesOf('Welcome', module).add('to Storybook', () => ({
   components: { Welcome },
@@ -35,6 +36,12 @@ storiesOf('Todo', module)
   .add('without data', () => ({
     components: { Todo },
     template: '<todo/>',
+  }));
+
+storiesOf('UserMenu', module)
+  .add('basic', () => ({
+    components: { UserMenu },
+    template: '<user-menu></user-menu>'
   }));
 
 /* eslint-enable react/react-in-jsx-scope */

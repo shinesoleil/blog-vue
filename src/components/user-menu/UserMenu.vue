@@ -36,6 +36,7 @@
     width: 240px;
     float: right;
     opacity: 0.5;
+    text-align: center;
 
     &:hover {
       opacity: 1;
