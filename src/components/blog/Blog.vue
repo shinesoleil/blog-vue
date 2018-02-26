@@ -7,6 +7,7 @@
 
 <script> import VueMarkdown from 'vue-markdown';
 import marked from 'marked';
+import { getUrlById } from '../../../static/articles';
 
 export default {
   name: 'blog',
@@ -17,8 +18,9 @@ export default {
     };
   },
   async created() {
+    const url = getUrlById(this.$route.params.id);
     try {
-      const res = await fetch('https://raw.githubusercontent.com/shinesoleil/blog-vue/master/static/p3.md');
+      const res = await fetch(url);
       const text = await res.text();
       this.source = marked(text);
       this.isLoading = false;
