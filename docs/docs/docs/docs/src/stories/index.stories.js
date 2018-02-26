@@ -31,8 +31,6 @@ function _interopRequireDefault(obj) {
     methods: { action: (0, _addonLinks.linkTo)('Button') }
   };
 });
-// eslint-disable-next-line import/extensions
-
 
 (0, _vue.storiesOf)('Button', module).add('with text', function () {
   return {
@@ -61,6 +59,7 @@ function _interopRequireDefault(obj) {
 });
 
 /* eslint-enable react/react-in-jsx-scope */
+//# sourceMappingURL=index.stories.js.map
 //# sourceMappingURL=index.stories.js.map
 //# sourceMappingURL=index.stories.js.map
 //# sourceMappingURL=index.stories.js.map
