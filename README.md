@@ -1,4 +1,4 @@
-# first
+# Personal Blog in VueJS
 
 > A Vue.js project
 
