@@ -1,17 +1,32 @@
 <template>
   <ul class="menu">
-    <li class="item" @click="handleClick('homepage')">About</li>
-    <li class="item" @click="handleClick('blogs')">Blogs</li>
-    <li class="item" @click="handleClick('table-test')">Work</li>
-    <li class="item" @click="handleClick('user-home')">Contact</li>
+    <li v-bind:class="['item', {active: isActive('home')}]"
+        @click="handleClick('homepage')">About
+    </li>
+    <li v-bind:class="['item', {active: isActive('blog')}]"
+        @click="handleClick('blogs')">Blogs
+    </li>
+    <li v-bind:class="['item', {active: isActive('created')}]"
+        @click="handleClick('table-test')">
+      Work
+    </li>
+    <li v-bind:class="['item', {active: isActive('user')}]"
+        @click="handleClick('user-home')">Contact
+    </li>
   </ul>
 </template>
 
-<script> import Router from '../router/index';
+<script>import Router from '../router/index';
 
 export default {
   name: 'sidebar',
   methods: {
+    isActive(item) {
+      if (this.$route.path === '/' && item === 'home') {
+        return true;
+      }
+      return this.$route.path.includes(item);
+    },
     handleClick: (routeName) => {
       Router.push({
         name: routeName,
@@ -45,6 +60,11 @@ export default {
         color: #52C08E;
         padding-right: 15px;
       }
+    }
+
+    .active {
+      color: #52C08E;
+      padding-right: 15px;
     }
   }
 
