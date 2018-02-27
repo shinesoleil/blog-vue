@@ -12,35 +12,35 @@ var _vueRouter = require('vue-router');
 
 var _vueRouter2 = _interopRequireDefault(_vueRouter);
 
-var _HelloWorld = require('@/components/HelloWorld');
+var _HelloWorld = require('../components/HelloWorld.vue');
 
 var _HelloWorld2 = _interopRequireDefault(_HelloWorld);
 
-var _BlogList = require('@/components/blog/BlogList');
+var _BlogList = require('../components/blog/BlogList.vue');
 
 var _BlogList2 = _interopRequireDefault(_BlogList);
 
-var _Blog = require('@/components/blog/Blog');
+var _Blog = require('../components/blog/Blog.vue');
 
 var _Blog2 = _interopRequireDefault(_Blog);
 
-var _MyTable = require('@/components/MyTable');
+var _MyTable = require('../components/MyTable.vue');
 
 var _MyTable2 = _interopRequireDefault(_MyTable);
 
-var _User = require('@/components/user/User');
+var _User = require('../components/user/User.vue');
 
 var _User2 = _interopRequireDefault(_User);
 
-var _UserHome = require('@/components/user/UserHome');
+var _UserHome = require('../components/user/UserHome.vue');
 
 var _UserHome2 = _interopRequireDefault(_UserHome);
 
-var _UserProfile = require('@/components/user/UserProfile');
+var _UserProfile = require('../components/user/UserProfile.vue');
 
 var _UserProfile2 = _interopRequireDefault(_UserProfile);
 
-var _UserSettings = require('@/components/user/UserSettings');
+var _UserSettings = require('../components/user/UserSettings.vue');
 
 var _UserSettings2 = _interopRequireDefault(_UserSettings);
 

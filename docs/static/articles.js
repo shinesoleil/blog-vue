@@ -12,10 +12,10 @@ const articles = [
     url: 'https://raw.githubusercontent.com/shinesoleil/blog-vue/master/static/english-community.md',
   },
   {
-    title: 'Placeholder',
+    title: 'More Articles',
     id: '3',
-    date: '2018-02-01',
-    url: 'https://raw.githubusercontent.com/shinesoleil/blog-vue/master/static/p3.md',
+    date: '2018-02-27',
+    url: 'https://raw.githubusercontent.com/shinesoleil/blog-vue/master/static/more.md',
   },
 ];
 

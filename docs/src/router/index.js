@@ -12,10 +12,6 @@ var _vueRouter = require('vue-router');
 
 var _vueRouter2 = _interopRequireDefault(_vueRouter);
 
-var _HelloWorld = require('../components/HelloWorld.vue');
-
-var _HelloWorld2 = _interopRequireDefault(_HelloWorld);
-
 var _BlogList = require('../components/blog/BlogList.vue');
 
 var _BlogList2 = _interopRequireDefault(_BlogList);
@@ -24,25 +20,21 @@ var _Blog = require('../components/blog/Blog.vue');
 
 var _Blog2 = _interopRequireDefault(_Blog);
 
-var _MyTable = require('../components/MyTable.vue');
+var _Lab = require('../components/laboratory/Lab.vue');
 
-var _MyTable2 = _interopRequireDefault(_MyTable);
+var _Lab2 = _interopRequireDefault(_Lab);
 
-var _User = require('../components/user/User.vue');
+var _LabHome = require('../components/laboratory/LabHome.vue');
 
-var _User2 = _interopRequireDefault(_User);
+var _LabHome2 = _interopRequireDefault(_LabHome);
 
-var _UserHome = require('../components/user/UserHome.vue');
+var _LabTable = require('../components/laboratory/LabTable.vue');
 
-var _UserHome2 = _interopRequireDefault(_UserHome);
+var _LabTable2 = _interopRequireDefault(_LabTable);
 
-var _UserProfile = require('../components/user/UserProfile.vue');
+var _Contact = require('../components/contact/Contact');
 
-var _UserProfile2 = _interopRequireDefault(_UserProfile);
-
-var _UserSettings = require('../components/user/UserSettings.vue');
-
-var _UserSettings2 = _interopRequireDefault(_UserSettings);
+var _Contact2 = _interopRequireDefault(_Contact);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -50,10 +42,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 _vue2.default.use(_vueRouter2.default);
 
 exports.default = new _vueRouter2.default({
+  mode: 'history',
   routes: [{
     path: '/',
-    name: 'homepage',
-    component: _HelloWorld2.default
+    redirect: '/blogs'
   }, {
     path: '/blogs',
     name: 'blogs',
@@ -64,36 +56,23 @@ exports.default = new _vueRouter2.default({
     component: _Blog2.default,
     props: true
   }, {
-    path: '/lifecycles/created',
-    name: 'table-test',
-    component: _MyTable2.default
-  }, {
     // https://github.com/pillarjs/path-to-regexp#parameters
-    path: '/user/:id(\\d+)',
-    component: _User2.default,
+    path: '/lab',
+    component: _Lab2.default,
     props: true,
     children: [{
       path: '',
-      name: 'user-home',
-      component: _UserHome2.default
+      name: 'lab',
+      component: _LabHome2.default
     }, {
-      path: 'profile',
-      name: 'user-profie',
-      component: _UserProfile2.default
-    }, {
-      path: 'settings',
-      name: 'user-settings',
-      component: _UserSettings2.default
-    }, {
-      path: 'all',
-      name: 'user-all',
-      // components with an 's'
-      components: {
-        default: _UserHome2.default,
-        profile: _UserProfile2.default,
-        settings: _UserSettings2.default
-      }
+      path: 'table',
+      name: 'table',
+      component: _LabTable2.default
     }]
+  }, {
+    path: '/contact',
+    name: 'contact',
+    component: _Contact2.default
   }]
 });
 //# sourceMappingURL=index.js.map
