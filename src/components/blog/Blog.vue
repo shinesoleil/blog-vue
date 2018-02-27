@@ -2,6 +2,7 @@
   <div>
     <div class="text" v-html="source"></div>
     <vcl-facebook v-show="isLoading"/>
+    <h1 v-show="isError">Oops... Article Not Found...</h1>
   </div>
 </template>
 
@@ -24,9 +25,14 @@ export default {
     const url = getUrlById(this.$route.params.id);
     try {
       const res = await fetch(url);
-      const text = await res.text();
-      this.source = marked(text);
-      this.isLoading = false;
+      if (res.status === 200) {
+        const text = await res.text();
+        this.source = marked(text);
+        this.isLoading = false;
+      } else {
+        this.isLoading = false;
+        throw new Error(res.statusText);
+      }
     } catch (err) {
       this.isError = true;
     }

@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>VueJS Laboratory</h1>
+    <p>Test VueJS Framework Here</p>
     <div>
       <router-link to="/lab/">Home</router-link>
       <router-link to="/lab/table">Table</router-link>
