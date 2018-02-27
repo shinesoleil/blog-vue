@@ -3,9 +3,9 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import BlogList from '../components/blog/BlogList.vue';
 import Blog from '../components/blog/Blog.vue';
-import MyTable from '../components/MyTable.vue';
 import Lab from '../components/laboratory/Lab.vue';
 import LabHome from '../components/laboratory/LabHome.vue';
+import LabTable from '../components/laboratory/LabTable.vue';
 
 Vue.use(Router);
 
@@ -41,7 +41,7 @@ export default new Router({
         {
           path: 'table',
           name: 'table',
-          component: MyTable,
+          component: LabTable,
         },
       ],
     },
