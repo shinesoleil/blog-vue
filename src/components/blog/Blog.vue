@@ -1,20 +1,23 @@
 <template>
   <div>
-    <h1>My Blog</h1>
     <div class="text" v-html="source"></div>
+    <vcl-facebook v-show="isLoading"/>
   </div>
 </template>
 
 <script> import VueMarkdown from 'vue-markdown';
+import { VclFacebook } from 'vue-content-loading';
 import marked from 'marked';
 import { getUrlById } from '../../../static/articles';
 
 export default {
   name: 'blog',
-  components: { VueMarkdown },
+  components: { VueMarkdown, VclFacebook },
   data() {
     return {
       source: '',
+      isLoading: true,
+      isError: false,
     };
   },
   async created() {
