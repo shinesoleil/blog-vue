@@ -1,6 +1,10 @@
 <template>
   <div id="app">
     <div class="head">
+      <div class="logo">
+        <span class="helper"/>
+        <img src="../static/tw-logo.png">
+      </div>
       <UserMenu/>
     </div>
     <div class="body-wrap">
@@ -8,7 +12,9 @@
         <sidebar/>
       </div>
       <div class="center">
-        <router-view/>
+        <div class="wrapper">
+          <router-view/>
+        </div>
       </div>
     </div>
   </div>
@@ -50,6 +56,25 @@ export default {
     position: fixed;
     left: 0;
     top: 0;
+
+    .logo {
+      display: inline-block;
+      height: 80px;
+      width: 250px;
+      position: absolute;
+      left: 0;
+
+      .helper {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+      }
+
+      img {
+        width: 200px;
+        vertical-align: middle;
+      }
+    }
   }
 
   .body-wrap {
@@ -58,7 +83,7 @@ export default {
 
   .sidebar {
     height: 100%;
-    width: 200px;
+    width: 250px;
     position: fixed;
     background-color: #F9F9F9;
   }
@@ -67,6 +92,11 @@ export default {
     height: 100%;
     margin-left: 200px;
     padding: 40px 100px;
+
+    .wrapper {
+      max-width: 985px;
+      margin: 0 auto;
+    }
   }
 
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Blogs Catalog</h1>
+    <h1>Blogs</h1>
     <ul class="list">
       <li class="item"
           v-for="info in infos"
