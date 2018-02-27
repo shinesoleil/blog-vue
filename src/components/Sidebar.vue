@@ -1,15 +1,22 @@
 <template>
-  <ul class="menu">
-    <li v-bind:class="['item', {active: isActive('blog')}]"
-        @click="handleClick('blogs')">Blogs
-    </li>
-    <li v-bind:class="['item', {active: isActive('lab')}]"
-        @click="handleClick('lab')">Vue Lab
-    </li>
-    <li v-bind:class="['item', {active: isActive('home')}]"
-        @click="handleClick('contact')">Contact
-    </li>
-  </ul>
+  <div>
+    <ul class="menu">
+      <li v-bind:class="['item', {active: isActive('blog')}]"
+          @click="handleClick('blogs')">Blogs
+      </li>
+      <li v-bind:class="['item', {active: isActive('lab')}]"
+          @click="handleClick('lab')">Vue Lab
+      </li>
+      <li v-bind:class="['item', {active: isActive('home')}]"
+          @click="handleClick('contact')">Contact
+      </li>
+    </ul>
+
+    <div class="footer">
+      <div>© Hao Pan 2018 </div>
+      <div>All rights reserved.</div>
+    </div>
+  </div>
 </template>
 
 <script>import Router from '../router/index';
@@ -40,7 +47,6 @@ export default {
   }
 
   .menu {
-
     .item {
       height: 50px;
       line-height: 50px;
@@ -58,6 +64,15 @@ export default {
       color: #52C08E;
       padding-right: 15px;
     }
+  }
+
+  .footer {
+    width: 100%;
+    font-size: 14px;
+    position: absolute;
+    bottom: 120px;
+    margin: 0 auto;
+    text-align: center;
   }
 
 </style>
