@@ -6,6 +6,7 @@ import Blog from '../components/blog/Blog.vue';
 import Lab from '../components/laboratory/Lab.vue';
 import LabHome from '../components/laboratory/LabHome.vue';
 import LabTable from '../components/laboratory/LabTable.vue';
+import Contact from '../components/contact/Contact';
 
 Vue.use(Router);
 
@@ -48,7 +49,7 @@ export default new Router({
     {
       path: '/contact',
       name: 'contact',
-      component: BlogList,
+      component: Contact,
     },
   ],
 });

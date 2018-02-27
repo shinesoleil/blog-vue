@@ -26,9 +26,6 @@ export default {
     handleClick: (routeName) => {
       Router.push({
         name: routeName,
-        params: {
-          id: 123,
-        },
       });
     },
   },
