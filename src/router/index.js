@@ -1,23 +1,20 @@
 /* eslint-disable import/extensions */
 import Vue from 'vue';
 import Router from 'vue-router';
-import HelloWorld from '../components/HelloWorld.vue';
 import BlogList from '../components/blog/BlogList.vue';
 import Blog from '../components/blog/Blog.vue';
 import MyTable from '../components/MyTable.vue';
-import User from '../components/user/User.vue';
-import UserHome from '../components/user/UserHome.vue';
-import UserProfile from '../components/user/UserProfile.vue';
-import UserSettings from '../components/user/UserSettings.vue';
+import Lab from '../components/laboratory/Lab.vue';
+import LabHome from '../components/laboratory/LabHome.vue';
 
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
-      name: 'homepage',
-      component: HelloWorld,
+      redirect: '/blogs',
     },
     {
       path: '/blogs',
@@ -31,42 +28,27 @@ export default new Router({
       props: true,
     },
     {
-      path: '/lifecycles/created',
-      name: 'table-test',
-      component: MyTable,
-    },
-    {
       // https://github.com/pillarjs/path-to-regexp#parameters
-      path: '/user/:id(\\d+)',
-      component: User,
+      path: '/lab',
+      component: Lab,
       props: true,
       children: [
         {
           path: '',
-          name: 'user-home',
-          component: UserHome,
+          name: 'lab',
+          component: LabHome,
         },
         {
-          path: 'profile',
-          name: 'user-profie',
-          component: UserProfile,
-        },
-        {
-          path: 'settings',
-          name: 'user-settings',
-          component: UserSettings,
-        },
-        {
-          path: 'all',
-          name: 'user-all',
-          // components with an 's'
-          components: {
-            default: UserHome,
-            profile: UserProfile,
-            settings: UserSettings,
-          },
+          path: 'table',
+          name: 'table',
+          component: MyTable,
         },
       ],
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: BlogList,
     },
   ],
 });

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="head">
-      <div class="logo">
+      <div class="logo" @click="handleClick('blogs')">
         <span class="helper"/>
         <img src="../static/tw-logo.png">
       </div>
@@ -20,12 +20,20 @@
   </div>
 </template>
 
-<script> import UserMenu from './components/user-menu/UserMenu';
+<script> import Router from './router/index';
+import UserMenu from './components/user-menu/UserMenu';
 import Sidebar from './components/Sidebar';
 
 export default {
   name: 'App',
   components: { UserMenu, Sidebar },
+  methods: {
+    handleClick: (routeName) => {
+      Router.push({
+        name: routeName,
+      });
+    },
+  },
 }; </script>
 
 <style lang="scss">
@@ -63,6 +71,7 @@ export default {
       width: 250px;
       position: absolute;
       left: 0;
+      cursor: pointer;
 
       .helper {
         display: inline-block;
@@ -90,7 +99,7 @@ export default {
 
   .center {
     height: 100%;
-    margin-left: 200px;
+    margin-left: 250px;
     padding: 40px 100px;
 
     .wrapper {

@@ -3,15 +3,11 @@
     <li v-bind:class="['item', {active: isActive('blog')}]"
         @click="handleClick('blogs')">Blogs
     </li>
-    <li v-bind:class="['item', {active: isActive('created')}]"
-        @click="handleClick('table-test')">
-      Work
-    </li>
-    <li v-bind:class="['item', {active: isActive('user')}]"
-        @click="handleClick('user-home')">Contact
+    <li v-bind:class="['item', {active: isActive('lab')}]"
+        @click="handleClick('lab')">Vue Lab
     </li>
     <li v-bind:class="['item', {active: isActive('home')}]"
-        @click="handleClick('homepage')">Vue
+        @click="handleClick('contact')">Contact
     </li>
   </ul>
 </template>

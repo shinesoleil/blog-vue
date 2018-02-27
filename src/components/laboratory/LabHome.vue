@@ -77,11 +77,11 @@
 
 <script>
 // eslint-disable-next-line import/extensions
-import Todo from './Todo.vue';
+import Todo from '../Todo.vue';
 
 export default {
   components: { Todo },
-  name: 'HelloWorld',
+  name: 'lab-home',
   data() {
     return {
       msg: 'Hello ThoughtWorks.',
