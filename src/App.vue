@@ -5,10 +5,9 @@
     </div>
     <div class="body-wrap">
       <div class="sidebar">
-       <sidebar/>
+        <sidebar/>
       </div>
       <div class="center">
-        <img src="./assets/logo.png">
         <router-view/>
       </div>
     </div>
@@ -27,6 +26,11 @@ export default {
   html, body {
     height: 100%;
     margin: 0;
+  }
+
+  ul {
+    padding: 0;
+    list-style-type: none;
   }
 
   #app {
@@ -62,7 +66,7 @@ export default {
   .center {
     height: 100%;
     margin-left: 200px;
-    padding: 50px;
+    padding: 40px 100px;
   }
 
 </style>

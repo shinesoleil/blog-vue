@@ -1,14 +1,14 @@
 /* eslint-disable import/extensions */
 import Vue from 'vue';
 import Router from 'vue-router';
-import HelloWorld from '@/components/HelloWorld';
-import BlogList from '@/components/blog/BlogList';
-import Blog from '@/components/blog/Blog';
-import MyTable from '@/components/MyTable';
-import User from '@/components/user/User';
-import UserHome from '@/components/user/UserHome';
-import UserProfile from '@/components/user/UserProfile';
-import UserSettings from '@/components/user/UserSettings';
+import HelloWorld from '../components/HelloWorld.vue';
+import BlogList from '../components/blog/BlogList.vue';
+import Blog from '../components/blog/Blog.vue';
+import MyTable from '../components/MyTable.vue';
+import User from '../components/user/User.vue';
+import UserHome from '../components/user/UserHome.vue';
+import UserProfile from '../components/user/UserProfile.vue';
+import UserSettings from '../components/user/UserSettings.vue';
 
 Vue.use(Router);
 

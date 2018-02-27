@@ -1,8 +1,5 @@
 <template>
   <ul class="menu">
-    <li v-bind:class="['item', {active: isActive('home')}]"
-        @click="handleClick('homepage')">About
-    </li>
     <li v-bind:class="['item', {active: isActive('blog')}]"
         @click="handleClick('blogs')">Blogs
     </li>
@@ -12,6 +9,9 @@
     </li>
     <li v-bind:class="['item', {active: isActive('user')}]"
         @click="handleClick('user-home')">Contact
+    </li>
+    <li v-bind:class="['item', {active: isActive('home')}]"
+        @click="handleClick('homepage')">Vue
     </li>
   </ul>
 </template>
@@ -47,7 +47,6 @@ export default {
   }
 
   .menu {
-    list-style: none;
 
     .item {
       height: 50px;
