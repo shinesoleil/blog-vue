@@ -36,6 +36,13 @@ export default {
 }; </script>
 
 <style scoped lang="scss">
+  @mixin shift($property: all, $duration: .3s, $ease: linear) {
+    -webkit-transition: $property $duration $ease;
+    -moz-transition: $property $duration $ease;
+    -o-transition: $property $duration $ease;
+    transition: $property $duration $ease;
+  }
+
   .list {
 
     .item {
@@ -44,11 +51,11 @@ export default {
       width: 50%;
       min-width: 400px;
       margin: 0 auto 10px auto;
-      /*margin-bottom: 10px;*/
       background-color: #F9F9F9;
       text-align: center;
       border-left: 5px solid #52C08E;
       cursor: pointer;
+      @include shift(background-color);
 
       &:hover {
         background-color: #EFEFEF;
