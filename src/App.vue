@@ -9,7 +9,7 @@
     </div>
     <div class="body-wrap">
       <div class="sidebar">
-        <sidebar/>
+        <sidebar :targets="targets"/>
       </div>
       <div class="center">
         <div class="wrapper">
@@ -27,6 +27,15 @@ import Sidebar from './components/Sidebar';
 export default {
   name: 'App',
   components: { UserMenu, Sidebar },
+  data() {
+    return {
+      targets: [
+        { name: 'Blog', value: 'blogs' },
+        { name: 'Vue Lab', value: 'lab' },
+        { name: 'Contact', value: 'contact' },
+      ],
+    };
+  },
   methods: {
     handleClick: (routeName) => {
       Router.push({

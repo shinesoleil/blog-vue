@@ -1,19 +1,15 @@
 <template>
   <div>
     <ul class="menu">
-      <li v-bind:class="['item', {active: isActive('blog')}]"
-          @click="handleClick('blogs')">Blogs
-      </li>
-      <li v-bind:class="['item', {active: isActive('lab')}]"
-          @click="handleClick('lab')">Vue Lab
-      </li>
-      <li v-bind:class="['item', {active: isActive('home')}]"
-          @click="handleClick('contact')">Contact
+      <li v-for="target in targets"
+          v-bind:key="target.value"
+          v-bind:class="['item', {active: isActive(target.value)}]"
+          @click="handleClick(target.value)">{{target.name}}
       </li>
     </ul>
 
     <div class="footer">
-      <div>© Hao Pan 2018 </div>
+      <div>© Hao Pan 2018</div>
       <div>All rights reserved.</div>
     </div>
   </div>
@@ -23,6 +19,16 @@
 
 export default {
   name: 'sidebar',
+  // Prop definitions should be as detailed as possible.
+  props: {
+    targets: {
+      type: Array,
+      required: true,
+      validator() {
+        return true;
+      },
+    },
+  },
   methods: {
     isActive(item) {
       if (this.$route.path === '/' && item === 'home') {
