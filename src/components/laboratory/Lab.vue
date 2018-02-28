@@ -5,6 +5,7 @@
     <div>
       <router-link to="/lab/">Home</router-link>
       <router-link to="/lab/table">Table</router-link>
+      <router-link to="/lab/computed">Computed</router-link>
     </div>
     <router-view/>
   </div>
