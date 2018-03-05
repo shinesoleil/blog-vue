@@ -32,17 +32,17 @@ var _LabTable = require('../components/laboratory/LabTable.vue');
 
 var _LabTable2 = _interopRequireDefault(_LabTable);
 
-var _LabComputed = require('../components/laboratory/LabComputed.vue');
-
-var _LabComputed2 = _interopRequireDefault(_LabComputed);
-
 var _Contact = require('../components/contact/Contact');
 
 var _Contact2 = _interopRequireDefault(_Contact);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
 
-_vue2.default.use(_vueRouter2.default); /* eslint-disable import/extensions */
+/* eslint-disable import/extensions */
+_vue2.default.use(_vueRouter2.default);
+
 exports.default = new _vueRouter2.default({
   routes: [{
     path: '/',
@@ -69,10 +69,6 @@ exports.default = new _vueRouter2.default({
       path: 'table',
       name: 'table',
       component: _LabTable2.default
-    }, {
-      path: 'computed',
-      name: 'computed',
-      component: _LabComputed2.default
     }]
   }, {
     path: '/contact',
@@ -80,4 +76,6 @@ exports.default = new _vueRouter2.default({
     component: _Contact2.default
   }]
 });
+//# sourceMappingURL=index.js.map
+//# sourceMappingURL=index.js.map
 //# sourceMappingURL=index.js.map
