@@ -14,13 +14,13 @@
 </template>
 
 <script> import Router from '../../router/index';
-import articles from '../../../static/articles';
+import { getArticles } from '../../../static/articles';
 
 export default {
   name: 'blog-list',
   data() {
     return {
-      infos: articles,
+      infos: getArticles(),
     };
   },
   methods: {

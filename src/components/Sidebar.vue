@@ -19,6 +19,7 @@
 
 export default {
   name: 'sidebar',
+
   // Prop definitions should be as detailed as possible.
   props: {
     targets: {
@@ -29,6 +30,7 @@ export default {
       },
     },
   },
+
   methods: {
     isActive(item) {
       if (this.$route.path === '/' && item === 'home') {
@@ -36,6 +38,7 @@ export default {
       }
       return this.$route.path.includes(item);
     },
+
     handleClick: (routeName) => {
       Router.push({
         name: routeName,
