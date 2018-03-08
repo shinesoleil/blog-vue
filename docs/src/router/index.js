@@ -40,9 +40,7 @@ var _Contact = require('../components/contact/Contact');
 
 var _Contact2 = _interopRequireDefault(_Contact);
 
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _vue2.default.use(_vueRouter2.default); /* eslint-disable import/extensions */
 exports.default = new _vueRouter2.default({
@@ -82,6 +80,4 @@ exports.default = new _vueRouter2.default({
     component: _Contact2.default
   }]
 });
-//# sourceMappingURL=index.js.map
-//# sourceMappingURL=index.js.map
 //# sourceMappingURL=index.js.map
