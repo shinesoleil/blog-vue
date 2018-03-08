@@ -49,7 +49,7 @@ export default {
       height: 50px;
       line-height: 50px;
       width: 50%;
-      min-width: 400px;
+      min-width: 300px;
       margin: 0 auto 10px auto;
       background-color: #F9F9F9;
       text-align: center;
@@ -63,7 +63,7 @@ export default {
 
       .title {
         display: inline-block;
-        width: 250px;
+        width: 200px;
         font-weight: 500;
         text-align: left;
       }

@@ -6,10 +6,11 @@
         <img src="../static/tw-logo.png">
       </div>
       <UserMenu/>
+      <div class="nav-icon" @click="toggleSideBar()" >Menu</div>
     </div>
     <div class="body-wrap">
-      <div class="sidebar">
-        <sidebar :targets="targets"/>
+      <div class="sidebar" v-show="showSideBar">
+        <sidebar :targets="targets" />
       </div>
       <div class="center">
         <div class="wrapper">
@@ -34,13 +35,17 @@ export default {
         { name: 'Vue Lab', value: 'lab' },
         { name: 'Contact', value: 'contact' },
       ],
+      showSideBar: true,
     };
   },
   methods: {
-    handleClick: (routeName) => {
+    handleClick(routeName) {
       Router.push({
         name: routeName,
       });
+    },
+    toggleSideBar() {
+      this.showSideBar = !this.showSideBar;
     },
   },
 }; </script>
@@ -93,6 +98,22 @@ export default {
         vertical-align: middle;
       }
     }
+
+    .nav-icon {
+      display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      .nav-icon {
+        display: inline-block;
+        height: 80px;
+        line-height: 80px;
+        width: 150px;
+        float: right;
+        opacity: 0.5;
+        text-align: center;
+      }
+    }
   }
 
   .body-wrap {
@@ -104,12 +125,22 @@ export default {
     width: 250px;
     position: fixed;
     background-color: #F9F9F9;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      height: 280px;
+    }
   }
 
   .center {
     height: 100%;
     margin-left: 250px;
     padding: 40px 100px;
+
+    @media screen and (max-width: 768px) {
+      margin-left: 0;
+      padding: 40px 30px;
+    }
 
     .wrapper {
       max-width: 985px;

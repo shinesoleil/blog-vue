@@ -38,6 +38,10 @@
     opacity: 0.5;
     text-align: center;
 
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+
     &:hover {
       opacity: 1;
     }

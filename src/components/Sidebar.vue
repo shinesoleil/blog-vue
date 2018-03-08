@@ -82,6 +82,10 @@ export default {
     bottom: 120px;
     margin: 0 auto;
     text-align: center;
+
+    @media screen and (max-width: 768px) {
+      bottom: 40px;
+    }
   }
 
 </style>
