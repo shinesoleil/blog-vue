@@ -26,7 +26,8 @@
     "vue-content-loading": "^1.3.0",
     "vue-gh-pages": "^1.10.2",
     "vue-markdown": "^2.2.4",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vue-top": "^1.0.1"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.13",
