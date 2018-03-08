@@ -4,7 +4,9 @@
     <vcl-facebook v-show="isLoading"/>
     <h1 v-show="isError">Oops... Article Not Found...</h1>
     <vue-top bottom="30px" v-bind:speed="300">
-      <img src="../../../static/scrollTop.png" class="scrollTop"/>
+      <div class="topButton">
+        top
+      </div>
     </vue-top>
   </div>
 </template>
@@ -44,15 +46,30 @@ export default {
 }; </script>
 
 <style scoped lang="scss">
+  @mixin shift($property: all, $duration: .3s, $ease: linear) {
+    -webkit-transition: $property $duration $ease;
+    -moz-transition: $property $duration $ease;
+    -o-transition: $property $duration $ease;
+    transition: $property $duration $ease;
+  }
+
   .text {
     text-align: left;
   }
 
-  .scrollTop {
-    width: 30px;
+  .topButton {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20%;
+    border: 1px solid #2c3e50;
+    color: #2c3e50;
+    opacity: 0.4;
+    @include shift(opacity);
 
     &:hover {
       cursor: pointer;
+      opacity: 1;
     }
   }
 </style>
