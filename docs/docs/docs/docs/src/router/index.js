@@ -86,5 +86,3 @@ exports.default = new _vueRouter2.default({
 //# sourceMappingURL=index.js.map
 //# sourceMappingURL=index.js.map
 //# sourceMappingURL=index.js.map
-//# sourceMappingURL=index.js.map
-//# sourceMappingURL=index.js.map
