@@ -11,7 +11,6 @@
       <div class="user-options" v-show="active">
         <div class="user-option">Xi'an, Shaanxi, China</div>
         <div class="user-option">ThoughtWorks</div>
-        <div class="user-option">IT Dev & CSR</div>
       </div>
     </transition>
   </div>

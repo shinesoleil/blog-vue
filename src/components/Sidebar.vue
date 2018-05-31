@@ -1,5 +1,13 @@
 <template>
   <div>
+
+    <ul class="title">
+      <li class="sub-title">Tech @ Core</li>
+      <li class="sub-title">Social @ Heart</li>
+      <hr class="divider">
+
+    </ul>
+
     <ul class="menu">
       <li v-for="target in targets"
           v-bind:key="target.value"
@@ -16,9 +24,11 @@
 </template>
 
 <script>import Router from '../router/index';
+import UserMenu from '../components/user-menu/UserMenu';
 
 export default {
   name: 'sidebar',
+  components: { UserMenu },
 
   // Prop definitions should be as detailed as possible.
   props: {
@@ -55,7 +65,22 @@ export default {
     transition: $property $duration $ease;
   }
 
+  .title {
+
+    .sub-title {
+      font-size: 30px;
+    }
+
+    .divider {
+      width: 70%;
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+    }
+  }
+
   .menu {
+
+    margin-top: 30px;
+
     .item {
       height: 50px;
       line-height: 50px;

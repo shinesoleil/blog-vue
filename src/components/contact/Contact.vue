@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Contact me at ...</h1>
+    <h1>Contact me by hao_pan@outlook.com</h1>
   </div>
 </template>
 
@@ -8,6 +8,8 @@
   name: 'contact',
 }; </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+  img {
+    width: 100%;
+  }
 </style>

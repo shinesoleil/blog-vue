@@ -1,38 +1,26 @@
 <template>
   <div id="app">
-    <div class="head">
-      <div class="logo" @click="handleClick('blogs')">
-        <span class="helper"/>
-        <img src="../static/tw-logo.png">
-      </div>
-      <UserMenu/>
-      <div class="nav-icon" @click="toggleSideBar()" >Menu</div>
+    <div class="sidebar" v-show="showSideBar">
+      <sidebar :targets="targets"/>
     </div>
-    <div class="body-wrap">
-      <div class="sidebar" v-show="showSideBar">
-        <sidebar :targets="targets" />
-      </div>
-      <div class="center">
-        <div class="wrapper">
-          <router-view/>
-        </div>
+    <div class="center">
+      <div class="wrapper">
+        <router-view/>
       </div>
     </div>
   </div>
 </template>
 
 <script> import Router from './router/index';
-import UserMenu from './components/user-menu/UserMenu';
 import Sidebar from './components/Sidebar';
 
 export default {
   name: 'App',
-  components: { UserMenu, Sidebar },
+  components: { Sidebar },
   data() {
     return {
       targets: [
         { name: 'Blog', value: 'blogs' },
-        { name: 'Vue Lab', value: 'lab' },
         { name: 'Contact', value: 'contact' },
       ],
       showSideBar: true,
@@ -51,6 +39,15 @@ export default {
 }; </script>
 
 <style lang="scss">
+  @mixin selection {
+    ::-moz-selection {
+      @content;
+    }
+    ::selection {
+      @content;
+    }
+  }
+
   html, body {
     height: 100%;
     margin: 0;
@@ -69,6 +66,11 @@ export default {
     color: #2c3e50;
     height: 100%;
     width: 100%;
+
+    @include selection {
+      color: white;
+      background: black;
+    }
   }
 
   .head {
@@ -133,7 +135,6 @@ export default {
   }
 
   .center {
-    height: 100%;
     margin-left: 250px;
     padding: 40px 100px;
 

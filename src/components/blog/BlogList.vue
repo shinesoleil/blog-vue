@@ -48,7 +48,7 @@ export default {
     .item {
       height: 50px;
       line-height: 50px;
-      width: 50%;
+      width: 600px;
       min-width: 300px;
       margin: 0 auto 10px auto;
       background-color: #F9F9F9;
@@ -63,7 +63,7 @@ export default {
 
       .title {
         display: inline-block;
-        width: 200px;
+        width: 450px;
         font-weight: 500;
         text-align: left;
       }
